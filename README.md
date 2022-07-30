@@ -1,4 +1,4 @@
-# QA assignment: SmartFrame
+# QA assignment: SmartFrame 🚀
 
 Simple automated tests written in Javascript using Playwright.
 
@@ -22,8 +22,8 @@ Oh dear, it really took some time. In total, I spent on this part of the assignm
 ## Caveats
 
 ### Because this is only exemplary assignement...
-I did not want to go into this rabbit hole too far, there are some limitations in the tests:
-* they run only on Chrome (eventhough Playwright support many other browsers)
+I did not want to go into this rabbit hole too far, so there are some limitations in the tests:
+* they run only on Chrome (eventhough Playwright supports many other browsers)
 * tests are optimised for Windows - I did not have a chance to check if they work also on Mac or Linux
 * only steps and assertions specified in the provided test cases were covered - Playwright is pretty far in the support for visual testing, so if more detailed assertions for elements (checking colors, sizes, etc.) were needed, it's probably good way to go
 * tests are not checked and optimised to run in parallel
@@ -33,3 +33,8 @@ some things I would do differently:
 * checking what are requirements regarding browsers coverage
 * adding eslint code analysis and confirming linter rules
 * instead of using `removeAttribute` in the second test, actually taking advantage of support for multiple tabs Playwright provides (yessss!). There are some [official workarounds](https://github.com/microsoft/playwright/issues/2692), but they does not seem to (easily) work
+
+### If I also have access to developers...
+I would check on some testability challenges:
+* ask what exactly is `Uncaught SmartFrame E0B` and what I need to put into Cypress runner to resolve it
+* check is this possible to add `aria-` attributes and use them for better (closer to actual user experience) selectors; ideally, together with custom `data-testid` parameters to make tests even more reliable
